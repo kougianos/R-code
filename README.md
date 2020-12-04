@@ -1,2 +1,2 @@
 # R-code
-R repository that contains sample code in R
+Repository that contains sample code in R.
