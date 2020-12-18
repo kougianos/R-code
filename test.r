@@ -8,7 +8,7 @@ boxplot(ws, horizontal=T, xlab=c('weight (kg)'))
 
 plot(ws, hs, col=4, xlab='Βάρος (kg)', ylab='Ύψος (cm)')
 
-abline(b=90,h=mean(hs), col=2, lwd=3) #Add vertical line in plot
+abline(b=90,h=mean(hs), col=2, lwd=3) #Add horizontal line in plot
 abline(b=90,v=mean(ws), col=2, lwd=3) #Add vertical line in plot
 
 ############################################################################################################
@@ -56,3 +56,28 @@ title(main="Normal Probability plot for IQ of children from Non-depressed mother
 qqnorm(scored,main="")
 qqline(scored)
 title(main="Normal Probability plot for IQ of children from depressed mothers")
+
+############################################################################################################
+
+
+func1 <- function(x)
+{
+    x ^ (1:length(x))
+}
+
+func1(c(1:5))
+
+func2 <- function(x)
+{
+    n <- length(x)
+    (x ^ (1:n)) / (1:n)
+}
+func2(c(1:5))
+
+
+func3 <- function(x, n)
+{
+    1 + sum((x ^ (1:n)) / (1:n))
+}
+
+func3(3, 3)
