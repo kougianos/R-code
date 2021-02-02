@@ -1,2 +1,3 @@
-## R-code
-Repository that contains sample code in R.
+# R-code
+Repository that contains sample code in R, using various libraries and examples.
+
