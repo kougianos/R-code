@@ -98,3 +98,30 @@ zd
 e <- erase(p, z2)
 e <- p - z2
 plot(e)
+
+###########################################
+###########################################
+library(raster)
+x <- raster()
+x
+x <- raster(ncol=36, nrow=18, xmn=-1000, xmx=1000, ymn=-100, ymx=900)
+res(x)
+res(x) <- 100
+res(x)
+ncol(x)
+ncol(x) <- 18
+ncol(x)
+res(x)
+projection(x) <- "+proj=utm +zone=48 +datum=WGS84"
+x
+r <- raster(ncol=10, nrow=10)
+ncell(r)
+hasValues(r)
+values(r) <- 1:ncell(r)
+
+set.seed(0)
+values(r) <- runif(ncell(r))
+hasValues(r)
+inMemory(r)
+values(r)[1:10]
+plot(r, main='Raster with 100 cells')
